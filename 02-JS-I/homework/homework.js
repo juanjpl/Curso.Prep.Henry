@@ -224,6 +224,7 @@ function obtenerSaludo(nombre) {
   // "Martin" -> "Hola Martin!"
   // Tu código:
 
+  //prueba de texto
   return "Hola " + nombre + "!";
 }
 
