@@ -1,0 +1,44 @@
+Operadores logicos 
+
+Además de comparar condiciones en distintas expresiones 
+podemos comparar IGUALDADES ...
+
+Podemos preguntar si las expresiones son iguales o distintas,
+o una combinacion de ambas .
+
+empezamos con el "Y"
+
+para codear lo simbolizamos como && 
+
+ej. 
+expresion 1 && expresion2 
+
+en este caso si se cumplen las dos expresiones ... devuelve el valor TRUE
+
+en el caso contrario devuelve FALSE
+
+
+
+otro operador es el "O"
+
+aqui comparamos las expresiones con el simbolo ||
+
+ej 
+expresion1 || expresion2
+
+
+en este caso retorna TRUE si cualquiera de las expresiones es verdadera 
+en caso contrario retorna FALSE 
+
+
+otro operador es el "NOT"
+
+este comparador los simbolizamos con  "!"
+
+aqui se lee la comparacion como  
+
+ej.
+
+!false..... esta expresion pregunta ( si NO ES FALSO)
+
+
