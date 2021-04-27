@@ -8,14 +8,15 @@ function obtenerMayor(x, y) {
   // Tu código:
 
   
-  if(x===y){
+  
+  if(x > y){
     return x;
-  }else if(x > y){
-    return x;
-  }else{
+  }else if(y > x){
     return y;
-  }
-
+  }else {
+    return x;
+  
+}
    
 }
 
@@ -178,11 +179,26 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
 
-  if(numero === 0 || numero ===1){
-    return falso;
-  }else if(numero%numero===0 && numero%1===0){
-    return true;
+  for(var i=2; i<= numero; i++){
+    let contador= 0;
+
+    for(var j=2; j<= i/2; j++){
+
+      if(i%j === 0){
+        contador= contador + 1;
+      }
+
+    }
+
+    if(contador < 1){
+      return true;
+
+    }
+
+    return false;
   }
+
+  
 }
 
 function esVerdadero(valor){
