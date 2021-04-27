@@ -179,24 +179,22 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
 
-  for(var i=2; i<= numero; i++){
-    let contador= 0;
 
-    for(var j=2; j<= i/2; j++){
+  //analizamos primero que el numero sea menor que 2, ya que 1 y 0 no son considerados primos
+  if( numero < 2) return false;
 
-      if(i%j === 0){
-        contador= contador + 1;
-      }
+  //si el numero es 2 retornamos verdadero
+  if(numero === 2) return true;
 
+  //de lo contrario ( el argumento ingresado es mayor a 2 entramos en el for...)
+  for(var i = 2; i < numero; i++) {
+
+
+    if(numero % i === 0) {
+      return false;
     }
-
-    if(contador < 1){
-      return true;
-
-    }
-
-    return false;
   }
+  return true;
 
   
 }
@@ -219,10 +217,12 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
 
-let arrayTabla =[];
+var arrayTabla =[];
 
   for( let i=0 ; i<11 ; i++) {
-    arrayTabla.push[6*i]
+    arrayTabla.push( 6 * i);
+
+    //nota personal !!!! no funcionaba el push porque lo hacia con corchetes !!! toda la tarde perdida........
   }
 
   return arrayTabla;
