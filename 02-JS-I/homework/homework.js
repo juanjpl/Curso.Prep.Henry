@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "Juan Lima";
+const nuevaString = "Juan";
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 35;
@@ -36,27 +36,34 @@ function suma(x, y) {
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
 
-  return x+y ;
+  var suma = x+y;
+
+  return suma ;
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
 
-  return x-y;
+  var resta = x - y;
+  return resta;
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  return x*y;
+
+  var multiplicar = x*y;
+  return multiplicar;
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
 
-  return x/y ;
+  var dividir = x/y;
+
+  return dividir ;
 }
 
 function sonIguales(x, y) {

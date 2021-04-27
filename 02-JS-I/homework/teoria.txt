@@ -1,0 +1,149 @@
+Homework: Introducción a Javascript
+Instrucciones
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Variables
+Strings
+Funciones (argumentos, return)
+Declaraciones if
+Valores booleanos (true, false)
+
+/* =============================================== */
+
+Variables
+
+¿A qué llamamos variables ?
+
+Es un espacio de memoria reservada para guardar datos que le asignemos y depues podemos volver a usar.
+
+ej.
+
+var nombre ="Juan";
+
+esta es la notación mas común de crear variables que podemos usar en otro momento
+
+let apellido ="lima";
+
+Esta es otra forma de notación , pero depende del scope de donde se creó 
+
+const pi = 3.1416;
+
+Esta forma de variable , CONST, determina que la varible contiene un valor que NO CAMBIA.
+
+
+
+/* ============================================ */
+
+Strings
+
+String es un TIPO DE DATOS que utilizamos al programar.
+
+string especificamente es una cadena de texto y las definimos entre comillas "" 
+
+ej.
+
+var string = "Estamos comenzando en Henry"
+
+
+/* ============================================ */
+
+Funciones
+
+Las funciones son una forma de Objetos, son llamados CALLABLE OBJECTS ya que pueden ser invocados y 
+poseen propiedades como cualquier Objeto
+
+
+
+forma de notacion de funciones:
+
+function miFunction (){}
+
+var otraFuncion = function(){}
+
+var y Otra = () =>{}
+
+
+
+ej. de una funciones
+
+function loghola(){
+    console.log("hola!");
+}
+
+//llamamos a la funcion que se ejecute
+logHola();
+
+
+Argumentos de una funcion
+
+podemos enviarle datos a la funcion (los denominaremos argumentos ).
+
+ej.
+
+function logHola(argumento) {
+    console.log("Hola " + argumento);
+}
+
+//llamamos a la funcion enviandole el datos
+logHola("Juan");
+
+>"hola Juan"
+
+
+return
+
+Toda funcion necesita retornar "ALGO"
+utilizamos la palabra return ( palabra reservada, no usar para otra cosa )
+
+ej
+
+function sumar(a,b){
+    var suma = a + b;
+
+    return suma;
+}
+
+
+//llamamos a sumar
+
+sumar(2 , 4);
+>6
+
+
+/* ============================================ */
+
+condicionales ( control de flujo operadores de comparacion)
+
+
+controlaremos el flujo de nuestro codigo .. determinando condiciones que si se cumplen haran una cosa y si no haran otra
+
+utilizaremos la palara if
+
+
+ej.
+
+function puedeManejar(edad){
+    if(edad > 18){
+        return true;
+    }
+    return false;
+    }
+
+//llamamos a la funcion
+
+puedeManejar(20);
+>true // devuelve true porque se cumple la condicion que 20 es mayor que 18 . De lo contrario devolveria false
+
+
+/* ============================================ */
+
+valores booleanos (true , false)
+
+los valores true y false son otro tipo de datos que podemos utilizaremos
+
+ej.
+
+var quieroAprobarhenry = true;
+var noMeGustaCodear = false;
+
+
