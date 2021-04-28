@@ -3,18 +3,30 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
+
+  let matriz = array;
+
+return matriz[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+
+  let matriz = array;
+
+  return matriz[ matriz.length -1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+
+  let matriz = array;
+
+  return matriz.length;
 }
 
 
@@ -23,6 +35,14 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
+  let matriz = [];
+  for (var i=0; i<array.length ; i++){
+    matriz[i] = array[i] + 1;
+  }
+
+  return matriz;
+
 }
 
 
@@ -30,6 +50,12 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+
+  let matriz= array;
+
+    matriz.push( elemento);
+
+  return matriz;
 }
 
 
@@ -38,6 +64,12 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+
+  let matriz = array;
+
+  matriz.unshift(elemento);
+  
+  return matriz;
 }
 
 
@@ -47,6 +79,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+
+  let matriz = palabras;
+  let frase = matriz.join(" ") ;
+
+  
+  return frase ;
 }
 
 
@@ -54,6 +92,17 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+
+  let matriz = array;
+
+  for(var i=0 ; i<matriz.length ; i++){
+
+    if (matriz[i] === elemento){
+      return true;
+    }
+  }
+
+  return false;
 }
 
 
@@ -61,6 +110,20 @@ function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+
+  let array = [];
+  let suma =0;
+
+  for (var i=0 ; i< numeros.length ; i++){
+    array.push (Math.floor(numeros[i]));
+  }
+
+  for (var i=0; i< array.length ; i++){
+
+    suma = suma + array[i] ;
+  }
+
+  return suma;
 }
 
 
@@ -68,6 +131,19 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+
+  let matriz = [];
+  let suma =0;
+
+  for (var i=0 ; i< resultadosTest.length ; i++){
+    matriz.push (Math.floor(resultadosTest[i]));
+  }
+
+  for(var i=0; i < matriz.length; i++){
+    suma = suma + matriz[i];
+  }
+
+  return (suma / matriz.length);
 }
 
 
@@ -75,6 +151,23 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+let array =[];
+let mayor= - 9007199254740991;
+
+for(var i=0; i< numeros.length; i++){
+  array.push(Math.floor(numeros[i]));
+}
+
+for (var i=0; i <array.length ; i++){
+
+  if(array[i] > mayor){
+    mayor = array[i];
+  }
+
+}
+
+return mayor;
+
 }
 
 
