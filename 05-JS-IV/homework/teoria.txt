@@ -1,0 +1,147 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes 
+conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a 
+descubrir rápidamente cualquier agujero en tu comprensión.
+
+
+
+Objetos
+Propiedades
+Métodos
+Bucle for…in
+Notación de puntos vs notación de corchetes
+
+1.. OBJETOS
+
+los objetos contienen muchos datos sobre un mismo elemento
+
+declaramos los objetos usando llaves {}
+
+ej 
+const nuevoObjeto = {};
+
+2.. LOS OBJETOS ESTAN BASADOS EN  --- PARES -- CLAVE:VALOR
+
+(key:value)
+Los objetos utilizan el concepto clave - valor  --- >  "clave: valor"
+dentro de un objeto pueden estar agrupado muchos pares clave:valor... separados siempre por una coma ","
+
+ej
+
+const usuario={
+            username: "Juan.Perez",
+            password:"lorem123",
+            age: 34,
+            lovejavascript: true;
+}
+
+3.. ACCEDER A LOS VALORES
+
+notacion puntos
+
+usuario.username;  // Juan.Perez
+
+notacion corchetes
+
+user["username"];  // juan.Perez
+
+4.. ASIGNACION DE VALORES
+
+const nuevoUsuario = {
+                esNuevo: true;
+}
+
+notacion puntos
+
+nuevoUsuario.username = "Miguel Perez"
+
+notacion corchetes
+
+nuevoUsuario["pasword"] = "123456";
+
+
+5.. ELIMINAR Propiedades
+usaremos la palabra DELETE
+
+const nuevoObjeto = {
+    propiedad : true
+}
+
+delete nuevoObjeto.propiedad;
+
+
+6..METODOS 
+
+dentro de los objetos podemos guardar FUNCIONES ... aqui se denominan METODO
+
+
+ej
+
+const nuevos = {
+                decirHola : function(){
+                    console.log("Hola a todo el mundo!");
+                }
+}
+
+
+nuevos.decirHola();  // Hola a todo el mundo!
+
+
+
+7.. BUCLE FOR--- IN
+
+iteracion pares clave:VALORES
+
+javascript tiene una forma distinta de iteracion que el FOR.. de las matrices 
+
+utilizaremos el FOR ---in loop
+
+ej
+
+const usuario = {
+    username: "JuanPeres",
+    password: "lorem123",
+    lovejavascript: true,
+    favoriteNumber: 42
+
+
+}
+
+
+for (let clave  in usuario){
+    console.log(clave);
+    console.log(usuario[clave]);
+}
+
+
+//username
+//JuanPeres
+//password
+//lorem123
+.
+.
+.
+
+
+8.. PALABRA THIS
+
+usamos la palabra this... para referirnos a propiedades dentro del mismo objeto
+
+ej
+
+const usuario ={
+    username: "JuanPeres",
+    password: "lorem123",
+    lovejavascript: true,
+    favoriteNumber: 42
+
+    decirHola: function(){
+        console.log(this.username + " manda saludos!");
+    }
+};
+
+
+usuario.decirHola();
+//JuanPeres manda saludos!
+
+
+

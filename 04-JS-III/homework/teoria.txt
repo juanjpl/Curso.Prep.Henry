@@ -9,4 +9,59 @@ cualquier agujero en tu comprensión.
 
 Arrays
 
+Podemos pensar en los arrays como un conjunto de variables.
+
+Así como en una varible solo podemos guardar un solo dato y su tipo.... en un array podemos guardar muchos datos y tipos
+
+También a los arrays podemos llamarlos matrices ..
+
+Las definimos entre corchetes [] y dentro de ella podemos guardar todos los datos que deseemos separados por una coma ,
+
+ej:
+
+const  matriz = ["Juan","pedro",20,true,"Manuel"];
+
+podemos usar el metodo LENGTH .. para saber la cantidad de elementos dentro de nuestra matriz.
+
+por ej.... 
+console.log(matriz.length); // 5
+
+Tambien podemos acceder a los elementos de la matriz por su indice
+
+ej  console.log(matriz[0]); // 
+
+el indice siempre comienza en 0 dentro de una matriz 
+
+ej... matriz [0,1,2,3,4,5,..... elementos];
+
+asignamos un valor a un indice de la matriz
+
+matriz[3] = "Nuevo dato";
+
+
+metodos 
+
+matriz.pop();
+el metodo pop... elimina el ultimo elementos de la matriz
+
+matriz.push("Esteban");
+el metodo push ... añade un elemento en la ultima ubicacion y suma un lugar en el length.
+
+matriz.unshift("Javier");
+el metodo unshift añade un elemento al comienzo de la matriz.
+
+matriz.shift();
+elimina  el primer elemento de la matriz.
+
+
+recorriendo matrices
+
+podemos utilizar el bucle for para recorrer la matriz
+
+const alumnos = ["Juan", "Miguel","Jose"];
+
+for(var i=0; i> alumnos.length ; i++){
+
+    console.log(alumnos[i]);
+}
 
