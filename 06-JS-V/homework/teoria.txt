@@ -1,0 +1,78 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes 
+conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará 
+a descubrir rápidamente cualquier agujero en tu comprensión.
+
+
+prototype
+Constructors (de Clases)
+
+1..
+
+cuando creamos un OBJETO.. lo podemos comparar como una plantilla ....
+para no copiar el objeto una y otra vez  javascript nos permite crear una CLASE ... class o Constructors
+
+con un constructor ... podemos crear muuchos objetos que comparten las propiedades y metodos entre si
+
+
+2.. creamos el constructor
+
+ej
+
+function Gato(nombre) {
+    this.nombre = nombre;
+    this.maullar = function(){
+        return "Mi nombre es " + this.nombre + "... Meow!";
+    }
+}
+
+//creamos el objeto sam
+const sam = new Gato("Sam");
+
+//creamos el objeto kitty
+const kitty = new Gato("Kitty");
+
+console.log(sam.maullar()); // "Mi nombre es sam ... Meow!"
+console.log(Kitty.maullar()); // "Mi nombre es Kitty ... Meow!"
+
+3.. prototype
+
+
+los prototipos nos permiten ahorrar memoria y generar una sola vez un METODO que será llamada 
+cuando los objetos necesiten.
+
+ej.. 
+// creamos Clases
+
+function Usuario (nombre, github){
+    this.nombre = nombre;
+    this.github = github;
+
+}
+
+//creamos el prototipos
+
+Usuario.prototype.introduccion = function(){
+    return "Mi nombre es " + this.nombre + ", mi usuario de github es " + this.github;
+}
+
+
+//creamos objetos
+let juan = new Usuario("Juan","juan.perez");
+let antonio = new Usuario("Antonio","atralice");
+
+// usamos el prototipo en cada objeto
+
+juan.prototype.introduccion(); // "Mi nombre es Juan, mi usuario de github es juan.perez"
+antonio.prototype.introduccion(); // "Mi nombre es Antonio, mi usuario de github es atralice"
+
+4.. OBJECT assign
+
+el metodo assign de los objetos permite agregar propiedades a un objeto pasado por parametro
+
+var obj = {};
+
+Object.assign(obj, {nombre:"Emi", apellido:"Chequer"});
+
+obj.nombre; // Emi
+
+
