@@ -72,7 +72,7 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 #ejercicioSiete {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 23% 23% 23% 23%;
     grid-template-rows: 25% 25% 25% 25%;
   }
 
