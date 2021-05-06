@@ -1,0 +1,105 @@
+En un archivo de texto separado que debes crear, escribe explicaciones 
+de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. 
+Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+
+Funciones Callback
+
+1..CALLBACKS
+
+las callbacks son funciones pasadas como argumentos de otras funciones 
+podemos llamarlar cuando querramos y pasarle argumentos
+
+las callbacks ... son nombradas como (cb) en el codigo de javascript
+
+ej...
+
+function decirHola(usuario){
+    return "Hola " + usuario + "!";
+}
+
+function decirAdios(usuario){
+    return "Adios " + usuario + "!";
+}
+
+// creamos la callback donde le pasaremos una funcion como argumentos
+
+funcion crearSaludo(usuario, cb){
+    return cb(usuario);
+}
+
+// usamos la callback
+
+crearSaludo("Juan", decirHola); // Hola Juan !
+crearSaludo("Juan", decirAdios); // Adios Juan !
+
+
+2.. callback  ... FOREACH -- REDUCE -- MAP---
+
+FOR EACH
+
+esta callback es un bucle para arrays
+
+ej...
+
+//creamos un arrays
+
+const autos = ["Ford", "Chevrolet","Toyota","Tesla"];
+
+armemos la callback foreach que recorra el array autos e imprima cada elemento
+
+autos.forEach(function(elemento,indice){
+
+    console.log(elemento);
+})
+
+REDUCE
+
+esta callback tiene como funcion devolver un unico valor ...
+toma un array... sus elementos y los acumula en un acumulador que será el que devuelve
+
+ej
+
+const numeros = [1,2,3,4,5,6,7,8,9];
+const palabras = ["hola ", "mi ", "nombre ", "es ", "Juan"];
+
+const suma = numero.reduce(function(acc, elemento){
+    return acc + elemento;
+});
+
+
+console.log(suma); // 45
+
+const frase = palabra.reduce(function(acc, elemento){
+    return acc + " " + elemento;
+})
+
+console.log(frase); // hola mi nombre es Juan
+
+
+MAP
+
+map es una callback que toma un array y devuelve un nuevo array aplicando lo que nosotros querramos 
+modificar en cada elemento
+
+ej
+const numeros =[1,2,2,3,4];
+
+function multiplicarPorTres(elemento){
+    return elemento*3;
+}
+
+const triple = numeros.map(multiplicarPorTres){
+
+}
+
+
+console.log(triple); // [3,6,6,9,12];
+
+// otra opcion
+
+const doble = numero.map(function(elemento){
+    return elemento*2;
+})
+
+console.log(doble); // [2,,4,4,6,8]
